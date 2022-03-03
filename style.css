@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Xanh Mono", monospace;
+  font-weight: bold;
+  font-family: "digital-7regular";
+  letter-spacing: 3px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(154, 19, 126);
+  background: linear-gradient(
+    45deg,
+    rgb(119, 24, 24) 0%,
+    rgb(35, 83, 102) 30%,
+    rgb(56, 18, 32) 100%
+  );
+  overflow: auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.wrapper {
+  z-index: 2;
+  position: relative;
+}
+
+.display {
+  width: 500px;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.buttons__basic {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  background: white;
+}
+
+.button {
+  width: 125px;
+  height: 100px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  font-size: 40px;
+  border: 1px rgb(65, 65, 65) solid;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.button:active {
+  opacity: 0.6;
+}
+
+.button__compute {
+  color: white;
+  background: rgb(97, 33, 33);
+}
+
+.button--white {
+  color: white;
+}
+
+.button--orange {
+  color: rgb(97, 33, 33);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.display__current {
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.display__previous {
+  font-size: 30px;
+  opacity: 0.6;
+}
+
+.buttons__advanced {
+  position: absolute;
+  left: -250px;
+  top: 100px;
+  order: -1;
+  width: 250px;
+  height: 600px;
+  background-color: white;
+  flex-wrap: wrap;
+  display: none;
+  z-index: -1;
+}
+
+.button--grey {
+  color: rgb(139, 139, 139);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 500px) {
+  body {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-height: 650px) {
+  body {
+    align-items: flex-start;
+  }
+}
